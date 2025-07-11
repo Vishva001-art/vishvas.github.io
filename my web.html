@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0px;
+            top: 50%;
+            left: 50%;
+            color: blue;
+            font-style: x-large;
+        }
+        .main1 h1{
+            margin:0px;
+        }
+        .main3 h1{
+            margin:0px;
+        }
+        .main1{
+            width:100%;
+            height:70px;
+            background-color:rgb(192, 189, 16);
+            position:relative;
+        }
+        .main11{
+            position: absolute;
+            top: 50%;
+            left: 25%;
+            color: red;
+            font-size: xx-large;
+            transform: translate(-50%,-50%);
+        }
+        .main12{
+            position: absolute;
+            top: 50%;
+            left: 70%;
+            color: red;
+            font-size: x-large;
+            transform: translate(-50%,-50%);
+        }
+        .main13{
+            position: absolute;
+            top: 05%;
+            left: 75%;
+            color: green;
+            font-size: x-large;
+            transform: translate(-50%,-50%);
+        }
+        .main2{
+            width:100vw;
+            height: 80vh;
+            position: relative;
+        }
+        .main21{
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        color: rgb(34, 0, 255);
+        font-size:x-large;
+        }
+        .main22{
+        position: absolute;
+        left: 100px;
+        top: 400px;
+        }
+        .main22 button{
+            width: 100px;
+            height: 30px;
+            font-size: large;
+        }
+
+        .main23{
+            position: absolute;
+            right:250px;
+            top: 50px;
+            border-radius: 150px;
+        }
+        .main24{
+            position: absolute;
+            right:350px;
+            top: 100px;
+            display: none;
+        }
+        .main23 img{
+            height: 400px;
+            width: 350px;
+            border-radius: 150px;
+        }
+        #im1{
+            width:100%;
+            height:100%;
+        }
+        .social-icons {
+        position: absolute;
+        top: 500px;
+        left: 50px;
+        }
+        .social-icons a img {
+        width: 40px;
+        height: 40px;
+        }
+        .resume-btn {
+        position: static;
+        text-align: center;
+        margin-top: 20px;
+        }
+        .main3{
+            width:100%;
+            height:100px;
+            background-color:rgb(192, 189, 16);
+            position:relative;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div class = "main1">
+        <div class="main11">
+            <h1>Vishva</h1>
+        </div>
+        <div class="main12">
+            <button id="c">Home</button>
+        </div>
+    </div>
+        <div class="main13">
+            <button id="d"> Education</button>
+        </div>
+    <div class = "main2">
+        <img src="https://wallpapers.com/images/hd/professional-background-ra17eqqfz4ezw2he.jpg" alt="img" id="im1">
+        <div class="main21" id="deatiles">
+            <h1 id="h1">Hi There,</h1>
+            <h1 id="h2">This is Vishva</h1>
+            <h1 id="h3">B.E(ECE)</h1>
+        </div>
+        <div class="main22">
+            <button id="b"><b>About</b></button>
+        </div>
+        <div class="main23" id="visible">
+            <img src="proffessional.jpg" alt="">
+        </div>
+        <div class="main24" id="hidden">
+            <h1>this is hidden</h1>
+            <h1>apper only when event occurs</h1>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/vishvasjmr" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"/>
+        </a>
+        <a href="https://instagram.com/yourusername" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"/>
+        </a>
+        <a href="https://github.com/yourusername" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"/>
+        </a>
+    </div>
+        <div class="resume-btn">
+        <a href="resume.pdf" download>Download Resume</a>
+    </div>
+    </div>
+    <div class = "main3"></div>
+
+    <script>
+        document.getElementById('b').onclick =function(){
+            document.getElementById('h1').innerHTML="Under Graduate";
+            document.getElementById('h2').innerHTML="Completed at KPRIET";
+            document.getElementById('h3').innerHTML="IN 2027";
+            document.getElementById('visible').style.display='none';
+            document.getElementById('hidden').style.display='none';
+            document.getElementById('hidden').style.color='red';
+        }
+    </script>
+    <script>
+        document.getElementById('c').onclick=function(){
+            document.getElementById('h1').innerHTML="Hi There,";
+            document.getElementById('h2').innerHTML="This is Vishva";
+            document.getElementById('h3').innerHTML="B.E(ECE)";
+            document.getElementById('visible').style.display='block';
+            document.getElementById('hidden').style.display='none';
+            document.getElementById('hidden').style.color='red';
+
+        }
+    </script>
+    <script>
+        document.getElementById('d').onclick=function(){
+            document.getElementById('h1').innerHTML="I am completed my schoolings at KKN.Hr.Sec.School";
+            document.getElementById('h2').innerHTML="I am a Biology Student";
+            document.getElementById('h3').innerHTML="Main subject is Maths and Biology";
+            document.getElementById('visible').style.display='none';
+            document.getElementById('hidden').style.display='none';
+            document.getElementById('d').style.color='red';
+        }
+    </script>
+</body>
+</html>
